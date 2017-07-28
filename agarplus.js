@@ -1,4 +1,3 @@
-alert("Xgario-ml is looking for a Daily Streamer! Join our New Discord and talk with us");
 function MyApp() {
     function enter() {
         return $("#nick").val(myApp.getName()), nodeList[0][1] == myApp.getName() ? false : (nodeList[0][1] = myApp.getName(), setLocalStorage("nick", $("#nick").val()), player_profile[selected_profile].name = myApp.getName(), data(), true);
@@ -68,7 +67,7 @@ function MyApp() {
 
     }
     this.init = function() {
-       $("body").html("");
+        $("body").html("");
         $("head").append('<div id="werbung"<script type="text/javascript" src="http://www.sponsorads.de/script.php?s=267595"></script></div>');
         $("body").append('<div id="overlays"><div id="helloContainer" data-logged-in="0" data-has-account-data="0" data-party-state="0" data-results-state="0" data-gamemode="" style="scale(1)!important"><div class="side-container left-side"><div class="agario-panel agario-side-panel agarioProfilePanel level" style="display: block !important"><div id="profile-main"><div id="profile-pic" class="form-group clearfix"><div class="nav2 arrow-left"></div><div id="preview-img-area"><img id="preview-img"></div><div class="nav2 arrow-right"></div></div></div><input type="text" placeholder="Party token" class="partyToken form-control"> <button class="btn btn-primary joinParty" onclick="joinParty($(\'.partyToken\').val())">Join</button> <button class="btn btn-success createParty" style="margin-bottom: 5px" onclick="$(\'#helloContainer\').attr(\'data-party-state\', \'3\');createParty()">Create party token</button></div></div><div id="mainPanel" class="agario-panel" style="display: inline-block !important"><form role="form"><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li><li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li><li role="presentation"><a href="#theming" aria-controls="theming" role="tab" data-toggle="tab">Theming</a></li><li role="presentation"><a href="#hotkeys" aria-controls="hotkeys" data-toggle="modal" data-target="#hotkeys_setting">Hotkeys</a></li><li role="presentation"><a href="#misc" aria-controls="misc" role="tab" data-toggle="tab">+</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane fade in active" id="home"><div id="teamNameContainer" class="input-group"><input type="text" id="team_name" class="form-control" placeholder="Team" maxlength="10"></div><div id="nickContainer"><input id="nick" type="text" class="form-control" placeholder="Nick" maxlength="15" autofocus=""></div><input type="text" id="skin_url" class="form-control" placeholder="Skin URL"><select id="gamemode" class="form-control" onchange="setGameMode($(this).val())" required=""><option selected="selected" value="" data-itr="gamemode_ffa">FFA</option><option value=":teams" data-itr="gamemode_teams">Teams</option><option value=":experimental" data-itr="gamemode_experimental">Experimental</option><option value=":party" data-itr="party">Party</option></select><div id="locationKnown"><select id="region" class="form-control" onchange="setRegion($(\'#region\').val())" required=""><option selected="selected" disabled="disabled" value="" data-itr="region_select">-- Select a Region --</option><option value="US-Atlanta" data-itr="region_north_america">North America</option><option value="BR-Brazil" data-itr="region_south_america">South America</option><option value="EU-London" data-itr="region_europe">Europe</option><option value="RU-Russia" data-itr="region_russia">Russia</option><option value="TK-Turkey" data-itr="region_turkey">Turkey</option><option value="JP-Tokyo" data-itr="region_east_asia">East Asia</option><option value="CN-China" data-itr="region_china">China</option><option value="SG-Singapore" data-itr="region_oceania">Oceania</option></select></div><div id="locationUnknown"></div><button type="submit" onclick="setNick(document.getElementById(\'nick\').value); return false" class="btn btn-play btn-primary btn-needs-server" data-itr="play">Play</button> <button type="submit" onclick="setNick(document.getElementById(\'nick\').value); return false" class="btn btn-play-guest btn-success btn-needs-server" data-itr="play_as_guest">Play as guest</button><button onclick="return spectate(),!1" class="btn btn-warning btn-spectate btn-needs-server" data-itr="spectate">Spectate</button><center><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">\x3c/script><ins class="adsbygoogle" style="display:inline-block;width:300px;margin-bottom:10px" data-ad-client="ca-pub-2950000314973549" data-ad-slot="2383142315" data-ad-format="rectangle"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})\x3c/script></center><br><br><br><br><br><br><br><br><br><p style="text-align: center;"><b>THIS KEYS CANT GET CHANGED!</b><br>Bots Split <b>E</b> <br>Bots Feed <b>R</b><br>Bots Stop Move <b>T</b></p></div><div role="tabpanel" class="tab-pane fade" id="settings"><div class="zoomSpeed"></div><div class="container"><div class="settingsRow"><div class="col-xs-6 firstSettings"></div><div class="col-xs-6 secondSettings"></div></div></div></div><div role="tabpanel" class="tab-pane fade" id="theming"><div class="form-group"><label>Background Color</label><input type="text" id="backgroundColor" class="minicolors form-control"></div><div class="form-group"><label>Border Color</label><input type="text" id="borderColor" class="minicolors form-control"></div><div class="form-group" id="pelletColorGroup"><label>Pellet Color</label><input type="text" id="pelletColor" class="minicolors form-control"></div></div><div role="tabpanel" class="tab-pane fade" id="hotkeys">...</div><div role="tabpanel" class="tab-pane fade" id="misc"><audio src="http://frshoutcast.comunicazion.eu:8815/;" controls=""></audio></div></div></form></div></div></div>');
         $("body").append("<canvas id='canvas'>");
@@ -228,7 +227,7 @@ function MyApp() {
         $(".btn-spectate").prop("disabled", false);
         $("#nick").prop("disabled", false);
         $(".nav").show();
-        conn.leaveRoom(myApp.getRoom());
+        //conn.leaveRoom(myApp.getRoom());
     };
     this.afterGameLoaded = function() {
         myApp.isSpectating = false;
@@ -1340,7 +1339,9 @@ function ChatRoom() {
 
     this.enter = function() {
         if (this.isFocus()) {
-            this.sendMessage($("#input_box2").val());
+            m = $("#input_box2").val();
+            this.sendMessage(m); //Beta
+            this.receiveMessage($("#nick").val(), m);
             $("#input_box2").val("");
             $("#input_box2").blur();
             $("#chatboxArea2").hide();
@@ -1683,7 +1684,7 @@ function Minimap() {
 }
 
 function Connection() {
-     var msg;
+    var msg;
     var socket2 = null;
     var self = this;
     self.connect = function() {
@@ -1712,117 +1713,117 @@ function Connection() {
         });
 
         socket2.on("createRequess", function(data) {
-			
-			var token = data.token;
-			var success = data.success;
-			
-			if (success){
-				
-				$("#createChatButton").hide()
-				$("#chatToken").val(token);
-				$("#joinChatButton").text("Leave");
-				$("#joinChatButton").attr('class', 'btn btn-primary btn-red');
-				$("#joinChatButton").attr('onclick', 'leaveRoom("changing room"); return false;');
-				
-			}else{
-				
-				throw "createRequess error";
-			
-			}
+
+            var token = data.token;
+            var success = data.success;
+
+            if (success) {
+
+                $("#createChatButton").hide()
+                $("#chatToken").val(token);
+                $("#joinChatButton").text("Leave");
+                $("#joinChatButton").attr('class', 'btn btn-primary btn-red');
+                $("#joinChatButton").attr('onclick', 'leaveRoom("changing room"); return false;');
+
+            } else {
+
+                throw "createRequess error";
+
+            }
 
         });
-		
-		socket2.on("joinRequess", function(data) {
-			
-			var token = data.token;
-			var success = data.success;
-			
-			if (success){
-				
-				$("#createChatButton").hide()
-				$("#chatToken").val(token);
-				$("#joinChatButton").text("Leave");
-				$("#joinChatButton").attr('class', 'btn btn-primary btn-red');
-				$("#joinChatButton").attr('onclick', 'leaveRoom("changing room"); return false;');
-				
-			}else{
-				
-				throw "createRequess error";
-			
-			}
+
+        socket2.on("joinRequess", function(data) {
+
+            var token = data.token;
+            var success = data.success;
+
+            if (success) {
+
+                $("#createChatButton").hide()
+                $("#chatToken").val(token);
+                $("#joinChatButton").text("Leave");
+                $("#joinChatButton").attr('class', 'btn btn-primary btn-red');
+                $("#joinChatButton").attr('onclick', 'leaveRoom("changing room"); return false;');
+
+            } else {
+
+                throw "createRequess error";
+
+            }
 
         });
-		
-		socket2.on("Iwanttheplayername", function() {
-			
-			console.log("Iwanttheplayername");
-			var name = myApp.getName();
-			
-			if(name == ""){
-				
-				name = "An unnamed cell";
-				
-			}
-			
-			self.emit("name", {
-				
-				name: name
-				
-			});
+
+        socket2.on("Iwanttheplayername", function() {
+
+            console.log("Iwanttheplayername");
+            var name = myApp.getName();
+
+            if (name == "") {
+
+                name = "An unnamed cell";
+
+            }
+
+            self.emit("name", {
+
+                name: name
+
+            });
 
         });
-		
-		socket2.on("roomInfo", function(info) {
-			
-			var token = info.token;
-			var player_number = info.num_player_connected;
-			var player_list = info.player_list;
-			var owner = info.owner;
-			var mods = info.moderator;
-			var chatLocked = info.chatLocked;
-			
-			console.log(info);
-			self.update(info);
-			
+
+        socket2.on("roomInfo", function(info) {
+
+            var token = info.token;
+            var player_number = info.num_player_connected;
+            var player_list = info.player_list;
+            var owner = info.owner;
+            var mods = info.moderator;
+            var chatLocked = info.chatLocked;
+
+            console.log(info);
+            self.update(info);
+
         });
 
         //self.socket = socket;
 
     };
 
-	self.update = function(info){
-		
-		var token = info.token;
-		var player_number = info.num_player_connected;
-		var player_list = info.player_list;
-		var owner = info.owner;
-		var mods = info.moderator;
-		var chatLocked = info.chatLocked;
-		
-		var userOnline = $("#onlineUser");
-		
-		userOnline.text("Users online " + player_number);
-		
-		var chatOwner = $("#owner");
-		
-		chatOwner.text("Owner : " + owner);
-		
-		var chatUser = $("#chatUser"); //.html("");
-		var new_chatUser_html = "";
-		
-		for (var i = 0; i < player_list.length; i++){
-			
-			new_chatUser_html += '<div>' + (i + 1) + '.  ' + player_list[i] + '</div>';
-			
-		}
-		
-		chatUser.html(new_chatUser_html);
-		
-		
-		
-		
-	}
-	
+    self.update = function(info) {
+
+        var token = info.token;
+        var player_number = info.num_player_connected;
+        var player_list = info.player_list;
+        var owner = info.owner;
+        var mods = info.moderator;
+        var chatLocked = info.chatLocked;
+
+        var userOnline = $("#onlineUser");
+
+        userOnline.text("Userlist :" /* + player_number*/ );
+
+        var chatOwner = $("#owner");
+
+        chatOwner.text("Owner : " + owner);
+
+        var chatUser = $("#chatUser"); //.html("");
+        var new_chatUser_html = "";
+
+        for (var i = 0; i < player_list.length; i++) {
+
+            new_chatUser_html += '<div>' + (i + 1) + '.  ' + player_list[i] + '</div>';
+
+        }
+
+        chatUser.html(new_chatUser_html);
+
+
+
+
+    }
+
     self.emit = function(name, data) {
         socket2.emit(name, data);
     };
@@ -1837,9 +1838,9 @@ function Connection() {
     }
 
     self.createPrivateChat = function() {
-		
-		self.emit("createPrivateRoom");
-		
+
+        self.emit("createPrivateRoom");
+
     }
 
     self.joinChat = function(val) {
@@ -1881,21 +1882,21 @@ function Connection() {
     };
 
     self.leaveRoom = function(er) {
-		$("#createChatButton").show();
-		$("#joinChatButton").attr('class', 'btn btn-primary joinParty');
-		$("#chatToken").val("");
-		$("#joinChatButton").text("Join");
-		$("#joinChatButton").attr('onclick', 'joinChat($(\'#chatToken\').val());');
+        $("#createChatButton").show();
+        $("#joinChatButton").attr('class', 'btn btn-primary joinParty');
+        $("#chatToken").val("");
+        $("#joinChatButton").text("Join");
+        $("#joinChatButton").attr('onclick', 'joinChat($(\'#chatToken\').val());');
 
-		$("#game_info").html('<br></br> <h5 id="onlineUser"> User onlines 0</h5> <h5 id="owner"> </h5><h6 id="chatUser"> </h6>');
-		
+        $("#game_info").html('<br></br> <h5 id="onlineUser"> Userlist: Join a Server</h5> <h5 id="owner"> </h5><h6 id="chatUser"> </h6>');
+
         self.emit("leaveRoom", er);
         console.log("leave room");
         self.joinChatRoom(myApp.getCurrentIP());
     };
-	
-	window.leaveRoom = self.leaveRoom;
-	
+
+    window.leaveRoom = self.leaveRoom;
+
     self.uploadCoords = function(data) {
         data.name = myApp.getName();
         data.serverAddress = myApp.getCurrentPartyCode();
@@ -1903,36 +1904,36 @@ function Connection() {
         data.socketRoom = msg;
         self.emit("coords", data);
     };
-	
+
     self.sendMessage = function(message) {
         message.socketRoom = msg;
         if ("" != $("#chatToken").val()) {
             self.emit("sendMessage", message);
         }
     };
-	
-	window.last_ip = myApp.getCurrentIP();
-	window.this_ip = myApp.getCurrentIP();
-	window.first = true;
-	
-	setInterval(function(){
-		window.this_ip = myApp.getCurrentIP();
-		
-		if (window.last_ip != window.this_ip && "" == $("#chatToken").val()){
-			
-			self.joinChatRoom(myApp.getCurrentIP());
-			window.last_ip = myApp.getCurrentIP();
-			window.this_ip = myApp.getCurrentIP();
-			
-		}else if (window.first == true) {
-			
-			self.joinChatRoom(myApp.getCurrentIP());
-			window.first = false;
-			
-		}
-		
-		
-	}, 1000);
+
+    window.last_ip = myApp.getCurrentIP();
+    window.this_ip = myApp.getCurrentIP();
+    window.first = true;
+
+    setInterval(function() {
+        window.this_ip = myApp.getCurrentIP();
+
+        if (window.last_ip != window.this_ip && "" == $("#chatToken").val()) {
+
+            self.joinChatRoom(myApp.getCurrentIP());
+            window.last_ip = myApp.getCurrentIP();
+            window.this_ip = myApp.getCurrentIP();
+
+        } else if (window.first == true) {
+
+            self.joinChatRoom(myApp.getCurrentIP());
+            window.first = false;
+
+        }
+
+
+    }, 1000);
 
 }
 
@@ -2919,45 +2920,35 @@ var defaultHotkeyMessageSend = {
 var hkgIcon = {};
 var selected_profile = 0;
 var player_profile = [{
-    name: "Xgario.ml",
-    team: "1",
+    name: "",
     skinurl: defaultSkin
 }, {
-    name: "Xgario.ml",
-    team: "2",
-    skinurl: "http://i.imgur.com/B3fgpDn.jpg"
+    name: "",
+    skinurl: ""
 }, {
-    name: "Xgario.ml",
-    team: "3",
-    skinurl: "http://i.imgur.com/cNgSIOE.jpg"
+    name: "",
+    skinurl: ""
 }, {
-    name: "Xgario.ml",
-    team: "4",
-    skinurl: "http://i.imgur.com/0R9Kuom.jpg"
+    name: "",
+    skinurl: ""
 }, {
-    name: "Xgario.ml",
-    team: "5",
-    skinurl: "http://i.imgur.com/hEHevjo.jpg"
+    name: "",
+    skinurl: ""
 }, {
-    name: "Xgario.ml",
-    team: "6",
-    skinurl: "http://i.imgur.com/LjgyF8u.png"
+    name: "",
+    skinurl: ""
 }, {
-    name: "Profile 7",
-    team: "Team7",
-    skinurl: "https://181cfbce4e26cf7f3642ac9e82d9e05ca7869931-www.googledrive.com/host/0B6Qc5Ss9h9-sfmhZMXBsRHYySVZFTzl5cVFkX3VPYjlDU3JJVmhwbzV2LVc5MGk4c3RHVDg/1.png"
+    name: "",
+    skinurl: ""
 }, {
-    name: "Profile 8",
-    team: "Team8",
-    skinurl: "https://181cfbce4e26cf7f3642ac9e82d9e05ca7869931-www.googledrive.com/host/0B6Qc5Ss9h9-sfmhZMXBsRHYySVZFTzl5cVFkX3VPYjlDU3JJVmhwbzV2LVc5MGk4c3RHVDg/1.png"
+    name: "",
+    skinurl: ""
 }, {
-    name: "Profile 9",
-    team: "Team9",
-    skinurl: "https://181cfbce4e26cf7f3642ac9e82d9e05ca7869931-www.googledrive.com/host/0B6Qc5Ss9h9-sfmhZMXBsRHYySVZFTzl5cVFkX3VPYjlDU3JJVmhwbzV2LVc5MGk4c3RHVDg/1.png"
+    name: "",
+    skinurl: ""
 }, {
-    name: "Profile 10",
-    team: "Team10",
-    skinurl: "https://181cfbce4e26cf7f3642ac9e82d9e05ca7869931-www.googledrive.com/host/0B6Qc5Ss9h9-sfmhZMXBsRHYySVZFTzl5cVFkX3VPYjlDU3JJVmhwbzV2LVc5MGk4c3RHVDg/1.png"
+    name: "",
+    skinurl: ""
 }];
 myApp = new MyApp;
 myApp.init();
@@ -2996,29 +2987,29 @@ var announcementSent = false;
                     }
                 }
             }
-			//Change to Bot with Key Tab BETA
-           /* if (9 == event.keyCode) {
-                if (!n) {
-                    emit(18);
-                    n = true;
-                }
-            }*/
-			// E = Split Bots BETA
-			if (69 == event.keyCode) {
+            //Change to Bot with Key Tab BETA
+            /* if (9 == event.keyCode) {
+                 if (!n) {
+                     emit(18);
+                     n = true;
+                 }
+             }*/
+            // E = Split Bots BETA
+            if (69 == event.keyCode) {
                 if (!n) {
                     emit(22);
                     n = false;
                 }
             }
-			// R = Feed Bots BETA
-			if (82 == event.keyCode) {
+            // R = Feed Bots BETA
+            if (82 == event.keyCode) {
                 if (!n) {
                     emit(23);
                     n = false;
                 }
             }
-			// T = Stop Bots BETA
-			 if (84 == event.keyCode) {
+            // T = Stop Bots BETA
+            if (84 == event.keyCode) {
                 if (!n) {
                     emit(24);
                     n = false;
@@ -3335,7 +3326,8 @@ var announcementSent = false;
             console.log("socket error");
         };
     }
-window.openws = open;
+    window.openws = open;
+
     function encode(expectedNumberOfNonCommentArgs) {
         return new DataView(new ArrayBuffer(expectedNumberOfNonCommentArgs));
     }
@@ -3745,7 +3737,7 @@ window.openws = open;
     function writeUTFBytes() {
         if (handler() && (matchEnd && null != b)) {
             var skin = $("#skin_url").val();
-			console.log(b);
+            console.log(b);
 
             var test = "";
 
@@ -3766,14 +3758,14 @@ window.openws = open;
             var bi = 0;
             var a = 0;
 
-			for (; a < test.length; ++a) {
+            for (; a < test.length; ++a) {
                 buf.setUint16((1 + (2 * a)), test.charCodeAt(a), true);
             }
-			
+
             for (; bi < b.length; ++bi) {
                 buf.setUint16((1 + (2 * a) + (bi * 2)), b.charCodeAt(bi), true);
             }
-			//console.log(new Uint8Array(buf.buffer));
+            //console.log(new Uint8Array(buf.buffer));
             cb(buf);
             b = null;
         }
@@ -5617,30 +5609,30 @@ var handleResource = function(timeoutKey, url) {
     }
 };
 $("#backgroundColor").minicolors({
-    defaultValue: getLocalStorage("backgroundColor") || "#000000",
-    change: function(v, start1) {
-        setLocalStorage("backgroundColor", v);
-        $("body").css("background-color", v);
-    }
-}),//UPDATED TODO FIXED TEST
-/*$("#div_lb").minicolors({
-    defaultValue: getLocalStorage("div_lb") || "#000000",
-    change: function(v, start1) {
-        setLocalStorage("div_lb", v);
-        $("#div_lb").css("color", v);
-    }
-}),*/
- $("body").css("background-color", getLocalStorage("backgroundColor") || "#000000"), $("#borderColor").minicolors({
-    defaultValue: getLocalStorage("borderColor") || "#ffffff",
-    change: function(v, start1) {
-        setLocalStorage("borderColor", v);
-    }
-}), $("#pelletColor").minicolors({
-    defaultValue: getLocalStorage("pelletColor") || "#0849d4",
-    change: function(v, start1) {
-        setLocalStorage("pelletColor", v);
-        $(".sender").css("color", v);
-        $(".toast_sender").css("color", v);
-        $("#div_lb .header").css("color", v);
-    }
-}), $(".sender").css("color", getLocalStorage("pelletColor") || "#0849d4"), $(".toast_sender").css("color", getLocalStorage("pelletColor") || "#0849d4"), $("#div_lb .header").css("color", getLocalStorage("pelletColor") || "#0849d4");
+        defaultValue: getLocalStorage("backgroundColor") || "#000000",
+        change: function(v, start1) {
+            setLocalStorage("backgroundColor", v);
+            $("body").css("background-color", v);
+        }
+    }), //UPDATED TODO FIXED TEST
+    /*$("#div_lb").minicolors({
+        defaultValue: getLocalStorage("div_lb") || "#000000",
+        change: function(v, start1) {
+            setLocalStorage("div_lb", v);
+            $("#div_lb").css("color", v);
+        }
+    }),*/
+    $("body").css("background-color", getLocalStorage("backgroundColor") || "#000000"), $("#borderColor").minicolors({
+        defaultValue: getLocalStorage("borderColor") || "#ffffff",
+        change: function(v, start1) {
+            setLocalStorage("borderColor", v);
+        }
+    }), $("#pelletColor").minicolors({
+        defaultValue: getLocalStorage("pelletColor") || "#0849d4",
+        change: function(v, start1) {
+            setLocalStorage("pelletColor", v);
+            $(".sender").css("color", v);
+            $(".toast_sender").css("color", v);
+            $("#div_lb .header").css("color", v);
+        }
+    }), $(".sender").css("color", getLocalStorage("pelletColor") || "#0849d4"), $(".toast_sender").css("color", getLocalStorage("pelletColor") || "#0849d4"), $("#div_lb .header").css("color", getLocalStorage("pelletColor") || "#0849d4");
